@@ -1,7 +1,10 @@
 package 稀疏数组;
 
+import java.io.File;
+import java.io.*;
+
 public class SparseArray {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         //1.创建一个初始二维数组
         int a1[][] = new int[10][10];
         //2.初始化初始数组有效数值
@@ -44,7 +47,7 @@ public class SparseArray {
                 }
             }
         }
-        //将稀疏数组打印
+        //6.将稀疏数组打印
         System.out.println("\n"+"稀疏数组的结果：");
         for (int [] row: a2
         ) {
@@ -52,7 +55,17 @@ public class SparseArray {
             ) {
                 System.out.print(data+"\t");
             }
-            System.out.println();
+           System.out.println();
         }
+      /*  //7.将稀疏数组存入指定文件
+        File file = new File("SparseArray.txt");
+        FileOutputStream out = new FileOutputStream(file);
+        String content = "数值\t行数\t列数\t\n";
+        out.write(Byte.valueOf(content));
+        for(int i=1;i<a2.length;i++){
+            content = a2[i][0]+"\t"+a2[i][1]+"\t"+a2[i][2]+"\n";
+            out.write(content.getBytes());
+        }
+        out.close();*/
     }
 }
