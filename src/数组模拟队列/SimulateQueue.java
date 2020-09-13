@@ -17,11 +17,14 @@ public class SimulateQueue {
             System.out.println("队列不为空");
         }
         array.AddArray(13);
-   //     array.AddArray(14);
+        //     array.AddArray(14);
         array.ShowArray();
         array.ShowHeadArray();
         array.GetArray();
-}
+        if (array.NullArray()){
+            System.out.println("队列为空");
+        }
+    }
     //1.使用数组模拟队列——编写一个ArrayQueue类
     static class ArrayQueue{
         int maxSize;   //1）：表示队列的最大容量
@@ -58,13 +61,14 @@ public class SimulateQueue {
         public void GetArray(){
             //判断队列是否为空
             if (NullArray()){
-               throw new RuntimeException("队列为空，没有数据可以输出");
+                throw new RuntimeException("队列为空，没有数据可以输出");
             }else {
                 System.out.println("\n队列中的数据为：");
                 while (font!=maxSize-1){
                     font++;
                     System.out.print("array["+font+"]="+array[font]+"\t");
                 }
+                System.out.println();
             }
         }
         //7.显示所有数据
