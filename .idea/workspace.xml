@@ -2,17 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3fd23282-0fb6-41b6-80a9-7cee16338b1d" name="默认的" comment="将用环形数组模拟队列的代码上传">
-      <change afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/Wmtprogram2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DreamPlume/数组模拟队列/NewSimulateQueue$ArrayQueue.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/out/production/DreamPlume/数组模拟队列/NewSimulateQueue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DreamPlume/数组模拟队列/SimulateQueue$ArrayQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DreamPlume/数组模拟队列/SimulateQueue$ArrayQueue.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/DreamPlume/数组模拟队列/SimulateQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DreamPlume/数组模拟队列/SimulateQueue.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Wmtjava" beforeDir="false" afterPath="$PROJECT_DIR$/../Wmtjava" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -160,6 +151,7 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="3fd23282-0fb6-41b6-80a9-7cee16338b1d" name="默认的" comment="" />
+      <changelist id="" name="将用环形数组模拟队列的代码上传" comment="" />
       <created>1599917132222</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -173,7 +165,7 @@
       <workItem from="1600004452731" duration="4692000" />
       <workItem from="1600068644414" duration="536000" />
       <workItem from="1600216250941" duration="3989000" />
-      <workItem from="1600237388308" duration="2760000" />
+      <workItem from="1600237388308" duration="3030000" />
     </task>
     <task id="LOCAL-00001" summary="默认的">
       <created>1599919043489</created>
@@ -210,7 +202,21 @@
       <option name="project" value="LOCAL" />
       <updated>1600239422478</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="将用环形数组模拟队列的代码上传">
+      <created>1600240302362</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1600240302362</updated>
+    </task>
+    <task id="LOCAL-00007" summary="将用环形数组模拟队列的代码上传">
+      <created>1600240331810</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1600240331810</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,10 +246,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="361" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1599919323317" />
-    <state x="354" y="1" key="CommitChangelistDialog2" timestamp="1600240301319">
+    <state x="354" y="1" key="CommitChangelistDialog2" timestamp="1600240329771">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="354" y="1" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600240301319" />
+    <state x="354" y="1" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1600240329771" />
     <state x="93" y="93" width="1350" height="638" key="DiffContextDialog" timestamp="1600240151709">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -256,10 +262,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="577" y="325" key="Github.CreateGistDialog/0.0.1536.824@0.0.1536.824" timestamp="1600007381898" />
-    <state x="549" y="279" width="277" height="290" key="Github.ShareDialog" timestamp="1600240201785">
+    <state x="549" y="279" width="277" height="290" key="Github.ShareDialog" timestamp="1600240346169">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="279" width="277" height="290" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1600240201785" />
+    <state x="549" y="279" width="277" height="290" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1600240346169" />
     <state width="1493" height="210" key="GridCell.Tab.0.bottom" timestamp="1600238838909">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
