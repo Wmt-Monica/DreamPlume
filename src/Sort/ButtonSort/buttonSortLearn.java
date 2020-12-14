@@ -18,7 +18,9 @@ public class buttonSortLearn {
                 }
             }
             if (flag == false){
-                System.out.println("第"+(i+1)+"趟排序结果："+ Arrays.toString(array));
+                if (i == 0){
+                    System.out.println("第"+(i+1)+"趟排序结果："+ Arrays.toString(array));
+                }
                 break;
             }else {
                 flag = false;
