@@ -57,7 +57,7 @@ public class insertSock {
      * @param array 传入的未排序的数组
      */
     public void insert(int[] array) {
-        for (int i = 2; i < array.length-1; i ++) {
+        for (int i = 1; i < array.length; i ++) {
             for (int j = 0; j < i; j ++) {
                 if (array[i] < array[j]) {
                     int step = array[i];
