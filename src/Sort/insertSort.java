@@ -1,4 +1,4 @@
-package sort;
+package Sort;
 
 /**
  * 插入排序

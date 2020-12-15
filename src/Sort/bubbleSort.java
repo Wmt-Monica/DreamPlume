@@ -1,4 +1,4 @@
-package sort;
+package Sort;
 
 /**
  * 冒泡排序
