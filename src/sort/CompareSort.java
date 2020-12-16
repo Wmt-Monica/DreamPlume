@@ -1,15 +1,15 @@
-package Sort;
+package sort;
 
 import java.util.Arrays;
 
-public class compareSort {
+public class CompareSort {
     public static void main(String[] args) {
         int[] array = new int[10];
         for (int i = 0; i < 10; i ++){
             array[i] = (int)(Math.random()*10+1);
         }
-        new compareSort().insertSort(array);
-//        new test().buttonSort(array);
+        new CompareSort().insertSort(array);
+//        new compareSort().buttonSort(array);
 //        new compareSort().selectSort(array);
     }
     public void buttonSort(int[] array){

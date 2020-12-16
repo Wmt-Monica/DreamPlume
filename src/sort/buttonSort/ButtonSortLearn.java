@@ -1,8 +1,8 @@
-package Sort.ButtonSort;
+package sort.buttonSort;
 
 import java.util.Arrays;
 
-public class buttonSortLearn {
+public class ButtonSortLearn {
     public static void main(String[] args) {
         int[] array = {-1,-5,6,3,8,0,-4,7,6,8,9};
 //        int[] array = {1,2,3,4,5,6};

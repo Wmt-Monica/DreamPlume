@@ -1,4 +1,4 @@
-package Sort.InsertSort;
+package sort.insertSort;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * 插入排序
  */
-public class insertSock {
+public class InsertSock {
     public static void main(String[] args) {
         int[] array = new int[20];
         for (int i = 0 ; i < 20; i ++){
@@ -19,7 +19,7 @@ public class insertSock {
         String insertStartDateTime = format.format(date1);
         System.out.println("插入排序的开始时间："+insertStartDateTime);
         long insertStartTime = System.currentTimeMillis();
-        new insertSock().insert(array);
+        new InsertSock().insert(array);
         Date date2 = new Date();
         String insertEndDateTime = format.format(date2);
         System.out.println("插入排序的结束时间："+insertEndDateTime);
@@ -29,7 +29,7 @@ public class insertSock {
         String buttonStartDateTime = format.format(date3);
         System.out.println("冒泡排序开始时间："+buttonStartDateTime);
         long buttonStartTime = System.currentTimeMillis();
-        new insertSock().button(array);
+        new InsertSock().button(array);
         Date date4 = new Date();
         String buttonEndDateTime = format.format(date4);
         System.out.println("冒泡排序的结束时间："+buttonEndDateTime);
@@ -39,7 +39,7 @@ public class insertSock {
         String selectStartDateTime = format.format(date5);
         System.out.println("选择排序开始时间："+selectStartDateTime);
         long selectStartTime = System.currentTimeMillis();
-        new insertSock().select(array);
+        new InsertSock().select(array);
         Date date6 = new Date();
         String selectEndDateTime = format.format(date6);
         System.out.println("选择排序的结束时间："+selectEndDateTime);

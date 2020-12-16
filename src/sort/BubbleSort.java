@@ -1,9 +1,9 @@
-package Sort;
+package sort;
 
 /**
  * 冒泡排序
  */
-public class bubbleSort {
+public class BubbleSort {
     public static void main(String[] args) {
         int[] nums = {2,4,6,8,6,3,5,6,8,9,4,2,4,73,2,45,63,78,23,13};
         for (int i = 0; i < nums.length-1; i ++){

@@ -1,9 +1,9 @@
-package Sort;
+package sort;
 
 /**
  * 插入排序
  */
-public class insertSort {
+public class InsertSort {
     public static void main(String[] args) {
         int[] nums = {1,2,5,7,9,4,3,3,5,6,7,87,9,98,42,43,33,45,5,64,66,7,54,32};
         for (int i = 0,j,step; i < nums.length ; i ++){

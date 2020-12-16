@@ -1,4 +1,4 @@
-package Sort.SelectSort;
+package sort.selectSort;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,7 +7,7 @@ import java.util.Date;
  * 选择排序
  * 这里将冒泡排序和选择排序进行时间的比较，可以明显看出选择排序的时间比冒泡排序所损耗的时间少很多
  */
-public class selectSort {
+public class SelectSort {
     public static void main(String[] args) {
         int[] array = new int[100000];
         for (int i = 0; i < 100000; i ++){
@@ -21,7 +21,7 @@ public class selectSort {
 
         long startTime = System.currentTimeMillis();
 
-        new selectSort().buttonSort(array);  // 执行冒泡排序方法
+        new SelectSort().buttonSort(array);  // 执行冒泡排序方法
 
         long endTime = System.currentTimeMillis();
         Date date2= new Date();
@@ -37,7 +37,7 @@ public class selectSort {
 
         long startTime2 = System.currentTimeMillis();
 
-        new selectSort().selectSort(array);  // 执行选择排序的方法
+        new SelectSort().selectSort(array);  // 执行选择排序的方法
 
         long endTime2 = System.currentTimeMillis();
         Date date4 = new Date();

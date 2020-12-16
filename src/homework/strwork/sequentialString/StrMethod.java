@@ -1,6 +1,6 @@
 package homework.strwork.sequentialString;
 
-public interface strMethod {
+public interface StrMethod {
     char charAt(int pos);                  // 求pos位置的字符
     int length();                          // 获取字符串的长度
     char[] substring(int start, int end);  // 求子串

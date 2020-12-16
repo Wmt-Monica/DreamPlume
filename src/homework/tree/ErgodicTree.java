@@ -13,7 +13,7 @@ import java.util.Stack;
  *F        G        Y
  *       E        Q
  */
-public class ergodicTree {
+public class ErgodicTree {
     static int nodeX = 0;
     static char maxNode;
     static TreeNode XFatherNode;
@@ -55,6 +55,8 @@ public class ergodicTree {
         System.out.println(list2);
         System.out.println("\n===============6================");
         System.out.println(isSymmetric(node1));
+        System.out.println("\n===============7================");
+        preStackOrder(node1);
 
     }
 
@@ -127,11 +129,11 @@ public class ergodicTree {
      * @return 返回 val 值等于 X 节点的父节点
      */
     public static TreeNode findFather(TreeNode root, char X){
-        if (!(root.left != null && root.left.val == 'X') && !(root.right != null && root.right.val == 'X')){
+        if (!(root.left != null && root.left.val == X) && !(root.right != null && root.right.val == X)){
             if (root.left != null){
                 findFather(root.left,X);
             }
-            if (root.right != null){
+            if (root.right != null) {
                 findFather(root.right,X);
             }
         }else {
@@ -144,21 +146,21 @@ public class ergodicTree {
      * 功能：请将二叉树的每个结点的值按照层序遍历的逆序输出
      * @param root 二叉树的根节点
      */
-    public static void printNodeValues(TreeNode root){
+    public static void printNodeValues(TreeNode root) {
         LinkedList<TreeNode> list = new LinkedList();
         Stack<Character> stack = new Stack<>();
         list.add(root);
-        while (!list.isEmpty()){
+        while (!list.isEmpty()) {
             TreeNode step = list.poll();
             stack.add(step.val);
             if (step.left != null){
                 list.add(step.left);
             }
-            if (step.right != null){
+            if (step.right != null) {
                 list.add(step.right);
             }
         }
-        while (!stack.isEmpty()){
+        while (!stack.isEmpty()) {
             System.out.print(stack.pop());
         }
     }
@@ -208,14 +210,6 @@ public class ergodicTree {
         return true;
     }
 
-
-
-
-
-
-
-
-
     /**
      * 功能：.非递归实现先序树结构
      *
@@ -249,11 +243,11 @@ public class ergodicTree {
      * @param x 在二叉树中寻找节点的 val 值
      */
     public static void getSubDepth(TreeNode btree, char x){
-        if (btree.val != x){
-            if (btree.left != null){
+        if (btree.val != x) {
+            if (btree.left != null) {
                 getSubDepth(btree.left,x);
             }
-            if (btree.right != null){
+            if (btree.right != null) {
                 getSubDepth(btree.right,x);
             }
         }else {
@@ -307,6 +301,25 @@ public class ergodicTree {
             }
         }
         return list;
+    }
+
+    /**
+     * 非递归先序遍历
+     */
+    public static void preStackOrder(TreeNode t){
+        Stack s=new Stack();
+        TreeNode p=t;
+        while(p!=null&&s.isEmpty()!=true){
+            if(p!=null){
+                System.out.print(p.val);
+                s.push(p);
+                p=p.left;
+            }
+            if(s.isEmpty()){
+                s.pop();
+                p=p.right;
+            }
+        }
     }
 
 }

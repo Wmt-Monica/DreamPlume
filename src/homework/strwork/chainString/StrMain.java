@@ -1,17 +1,17 @@
 package homework.strwork.chainString;
 
 
-public class strMain implements strMethod{
+public class StrMain implements StrMethod {
     char[] data;
 
     //构造器
-    public strMain(String s) {
+    public StrMain(String s) {
         this.data = s.toCharArray();
     }
 
     public static void main(String[] args) {
         String s = "Fvsd sfFwfsv SGFsadGS";
-        strMain str = new strMain(s);
+        StrMain str = new StrMain(s);
         System.out.println(str.indexOf("fF"));
         System.out.println("\n------------------------------------");
 

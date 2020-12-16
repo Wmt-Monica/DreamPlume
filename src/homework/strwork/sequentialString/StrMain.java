@@ -1,11 +1,11 @@
 package homework.strwork.sequentialString;
 
 //顺序串
-public class strMain implements strMethod {
+public class StrMain implements StrMethod {
     char[] data;
 
     //构造函数，创建对象只需要传入一个字符串即可
-    public strMain(String s) {
+    public StrMain(String s) {
         this.data = s.toCharArray();
     }
 
@@ -13,7 +13,7 @@ public class strMain implements strMethod {
         String s = "   ihspao phsa asphdp  cdvsyuph   ";
         String s2 = "   ihspao phsa asphdp  cdvsyuph   ";
         String s3 = "   ihspao phsa ash   ";
-        strMain str = new strMain(s);
+        StrMain str = new StrMain(s);
 
         System.out.println(str.charAt(6));  //找到索引位置为6的字符
         System.out.println("\n------------------------------------------------------");

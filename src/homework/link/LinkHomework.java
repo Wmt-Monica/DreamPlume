@@ -1,4 +1,4 @@
-package homework.Link;
+package homework.link;
 
 import java.util.Stack;
 
