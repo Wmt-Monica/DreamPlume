@@ -1,11 +1,11 @@
-package Tree.HaFuTree;
+package tree.haFuTree;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Queue;
 
 
-public class haFuTree {
+public class HaFuTree {
     public static class Node<E> {
         E data;
         double weight;
@@ -33,7 +33,7 @@ public class haFuTree {
         nodes.add(new Node("E", 10.0));
         nodes.add(new Node("F", 2.0));
 
-        Node root = haFuTree.createTree(nodes);
+        Node root = HaFuTree.createTree(nodes);
 
         System.out.println(breadthFirst(root));
 

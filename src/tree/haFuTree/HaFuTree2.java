@@ -1,9 +1,9 @@
-package Tree.HaFuTree;
+package tree.haFuTree;
 
 import java.util.*;
 import java.util.List;
 
-public class haFuTree2 {
+public class HaFuTree2 {
     public static void main(String[] args) {
         Node<Integer> node1 = new Node<>(2,-3);
         Node<Integer> node2 = new Node<>(4,-4);
