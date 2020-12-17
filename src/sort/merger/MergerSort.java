@@ -1,20 +1,31 @@
 package sort.merger;
 
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
 /**
- * 归并排序
+ * 归并排序：时间测试
  */
 public class MergerSort {
     public static void main(String[] args) {
-        int[] array = new int[30];
+        int[] array = new int[80000000];
         for (int i = 0; i < array.length; i ++){
-            array[i] = (int)(Math.random()*10+1);
+            array[i] = (int)(Math.random()*800000+1);
         }
+        SimpleDateFormat dateFormat = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+        Date date1 = new Date();
+        String startTime = dateFormat.format(date1);
+        System.out.println("归并排序开始时间："+startTime);
         new MergerSort().open(array,0,array.length-1);
-        System.out.println(Arrays.toString(array));
+        Date date2 = new Date();
+        String endTime = dateFormat.format(date2);
+        System.out.println("归并排序结束时间："+endTime);
+//        System.out.println(Arrays.toString(array));
+        System.out.println("经过了"+time+"轮排序");
     }
 
+    static int time = 0;  // 用于计算一共排序的次数，当对 N 个数据进行排序就需要排 N-1 次
     // 创建拆分数组 array 的方法
     public void open(int[] array, int left, int right) {
         if (left < right) {  // 如果左指针小于右指针就进行分割
@@ -30,6 +41,7 @@ public class MergerSort {
     }
     // 创建合并数组 array 的方法
     public void merge(int[] array, int left, int mid, int right) {
+        time++;
         // 首先创建一个临时数组变量用于存储 array 的数据
         int[] temp = new int[right-left+1];
         int i = left;  // 创建循环遍历的左部分的起始下标
