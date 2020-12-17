@@ -62,7 +62,6 @@ public class BinarySearch {
     public List<Integer> binarySearch2(int[] array, int left, int right , int findVial, List<Integer> findList) {
 
         if (left > right) {  // 当左索引大于右索引时说明未在 array 数组中查找到值为 findVial 的数据，就返回 -1
-           findList.add(-1);
            return findList;
         }
         int mid = (left + right) / 2;  // 计算所查找的二分段的所查找的中间分割下标
