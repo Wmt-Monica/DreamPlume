@@ -9,7 +9,7 @@ import java.util.List;
  * mid = left + (right - left) * (findVial - array[left]) / (array[right] - array[left])
  * 注意：插值查找适用于数据较大，array 中数据的值分布比较均匀的查找，如果 array 数组中的数据的值分布不均匀，该方法不一定比二分查找好
  */
-public class InsertVailSort {
+public class InsertVailSearch {
     public static void main(String[] args) {
         int[] array = new int[20];
         for (int i = 0; i < array.length; i ++) {
@@ -18,7 +18,7 @@ public class InsertVailSort {
         Arrays.sort(array);
         System.out.println(Arrays.toString(array));
         List<Integer> findList;
-        findList = new InsertVailSort().insertVailSort(array,0,array.length-1, 2);
+        findList = new InsertVailSearch().insertVailSort(array,0,array.length-1, 2);
         System.out.println(findList);
     }
 
