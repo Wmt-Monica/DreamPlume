@@ -1,11 +1,13 @@
 package tree.binaryTree;
 
+import java.util.*;
+
 public class BinaryTree {
     /*
                                     0
                             1                  2
                         3       4          5        6
-                     7                  8
+                     7             8
                   9
      */
     public static void main(String[] args) {
@@ -54,6 +56,9 @@ public class BinaryTree {
         root.delTreeNode(root,8);
         root.prePrintBinaryTree(root);
 
+        System.out.println("\n\n============层序遍历二叉树并将其层序顺序存放入 List 集合中并返回==========");
+        List<TreeNode> treeNodeList = root.cenXuTreeNode(root);
+        System.out.println(treeNodeList);
     }
 }
 
@@ -189,5 +194,23 @@ class TreeNode<E> {
         if (root.right != null) {
             delTreeNode(root.right, X);
         }
+    }
+
+    // 层序遍历并将其二叉树按照层序的顺序存储于List集合中
+    public List<TreeNode> cenXuTreeNode(TreeNode root) {
+        List<TreeNode> treeNodeList = new ArrayList<>();
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode treeNode = queue.poll();
+            treeNodeList.add(treeNode);
+            if (treeNode.left != null) {
+                queue.add(treeNode.left);
+            }
+            if (treeNode.right != null) {
+                queue.add(treeNode.right);
+            }
+        }
+        return treeNodeList;
     }
 }
