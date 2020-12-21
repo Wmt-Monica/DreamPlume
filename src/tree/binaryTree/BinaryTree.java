@@ -50,6 +50,9 @@ public class BinaryTree {
         TreeNode treeNodeX3 = root.backSearchTreeNode(root,8);
         System.out.println(treeNodeX3);
 
+        System.out.println("\n\n============遍历二叉树删除 X 值节点==========");
+        root.delTreeNode(root,8);
+        root.prePrintBinaryTree(root);
 
     }
 }
@@ -168,5 +171,23 @@ class TreeNode<E> {
             System.out.println("节点"+root+"不是我们要寻找的值");
         }
         return treeNode;
+    }
+
+    // 删除二叉树指定节点值为 X 的节点
+    public void delTreeNode(TreeNode root, int X) {
+        if (root.left != null && root.left.date.equals(X)) {
+            root.left = null;
+            return;
+        }
+        if (root.right != null && root.right.date.equals(X)) {
+            root.right = null;
+            return;
+        }
+        if (root.left != null) {
+            delTreeNode(root.left, X);
+        }
+        if (root.right != null) {
+            delTreeNode(root.right, X);
+        }
     }
 }
