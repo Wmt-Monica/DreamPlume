@@ -57,6 +57,11 @@ public class Test {
         return newArray;
     }
 
+    /**
+     * 将压缩数组解压并返回
+     * @param array 压缩后的数组
+     * @return 返回解压后的数组
+     */
     public int[][] decompressArray(int[][] array) {
         int[][] oldArray = new int[array[0][0]][array[0][1]];  // 依据原始数组的行数和列数创建数组
         int num = 1; // 赋值的有效数据
