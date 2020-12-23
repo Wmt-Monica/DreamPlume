@@ -16,11 +16,11 @@ public class Test {
         Stack<Integer> A = new Stack<>();
         Stack<Integer> B = new Stack<>();
         Stack<Integer> C = new Stack<>();
-        int hanoiNums = 16;
+        int hanoiNums = 5;
         for (int i = hanoiNums; i > 0; i --) {
             A.add(i);
         }
-        new Test().Hanoi(hanoiNums, A, B, C);
+        new Test().Hanoi(hanoiNums, A, "A", B, "B", C, "C");
         System.out.println(C);
     }
 
@@ -31,16 +31,16 @@ public class Test {
      * @param B List 集合塔 B
      * @param C List 集合塔 C
      */
-    public void Hanoi(int hanoiNums, Stack<Integer> A, Stack<Integer> B, Stack<Integer> C) {
+    public void Hanoi(int hanoiNums, Stack<Integer> A,String nameA, Stack<Integer> B,String nameB, Stack<Integer> C,String nameC) {
         if (hanoiNums == 1) {  // 当只有一个汉诺塔时直接将汉诺塔从塔 A 移动到塔 C
-            remove(hanoiNums, A, C);
+            remove(hanoiNums, A, nameA, C, nameC);
         }else {
             // 1.先借助 C 塔将 hanoiNums-1 个汉诺塔从 A 塔移动到 B 塔
-            Hanoi(hanoiNums-1, A, C, B);
+            Hanoi(hanoiNums-1, A, "A", C, "C", B, "B");
             // 2.将最大的第 hanoiNums 个汉诺塔从 A 塔移动到 C 塔
-            remove(hanoiNums, A, C);
+            remove(hanoiNums, A, nameA, C, nameC);
             // 3. 最后将已经有序的剩下的 hanoiNums-1 个汉诺塔借助 A 塔全部挨个从 B 塔移动到 C 塔
-            Hanoi(hanoiNums-1, B, A, C);
+            Hanoi(hanoiNums-1, B,"B", A, "A", C, "C");
         }
     }
 
@@ -50,8 +50,8 @@ public class Test {
      * @param A 第 num 个汉诺塔的起始柱子
      * @param B 第 num 个汉诺塔的终点柱子
      */
-    public void remove(int num, Stack<Integer> A, Stack<Integer> B) {
-        System.out.println("将第"+num+"个汉诺塔从"+A+"塔移动到"+B+"塔上");
+    public void remove(int num, Stack<Integer> A, String nameA, Stack<Integer> B, String nameB) {
+        System.out.println("将第"+num+"个汉诺塔从 "+nameA+" :"+A+"塔移动到 "+nameB+" :"+B+"塔上");
         B.add(A.pop());
     }
 }
