@@ -94,9 +94,9 @@ import java.util.Queue;
     /**
      * 求二叉树第 i 层的结点个数
      *
-     * @param root
-     * @param i
-     * @return
+     * @param root 二叉树根节点
+     * @param i 二叉树层数
+     * @return 返回二叉树该层的总节点数
      */
     public static int getNodeNumIthLevel(BTreeNode root, int i) {
         int floor = 0;  // 树的遍历的层数
