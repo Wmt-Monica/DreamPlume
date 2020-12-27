@@ -77,6 +77,7 @@ public class HeFuManTree {
             nodeList.remove(nodeList.size()-1);
             nodeList.remove(nodeList.size()-1);
             nodeList.add(prentNode);
+            quickHeFuManList(nodeList,0,nodeList.size()-1);
         }
         return nodeList.get(0);
     }

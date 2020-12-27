@@ -67,6 +67,9 @@ public class HaFuTree {
 
             //将新节点加入到集合中
             nodes.add(parent);
+
+            //重新对哈夫曼树进行快速排序
+            quickSort(nodes);
         }
 
         return nodes.get(0);
