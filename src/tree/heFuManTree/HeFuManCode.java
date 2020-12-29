@@ -30,10 +30,13 @@ public class HeFuManCode {
             }
             System.out.println();
         }
+
+
         System.out.println("=============使用赫夫曼编码将字符串转换成编码============");
+
         String str = "Cloud like clothes flower like appearance";  // 云想衣裳花想容
+        System.out.println("=============创造并层序遍历赫夫曼树============");
         Node root1 = heFuManCode.createCtrCodesTree(str);
-        System.out.println("=============层序遍历赫夫曼树============");
         List<List<Node>> nodeLists1 = heFuManCode.sequencePrint(root1);
         for (List<Node> nodeList2 : nodeLists1) {
             for (Node node : nodeList2) {
@@ -43,22 +46,34 @@ public class HeFuManCode {
         }
         Map<Character, String> ctrNodesMap;
         ctrNodesMap = heFuManCode.createCtrCodes(root1);
+
         System.out.println("==========将根据要传输数据的字符创建的赫夫曼树的字符对应的赫夫曼编码==========");
         for (Map.Entry<Character,String> entry : ctrNodesMap.entrySet()) {
             System.out.println("char = "+entry.getKey()+"\tcode = "+entry.getValue());
         }
+
         System.out.println("========将原始字符串使用ctrNodesMap集合中的字符集编码进行转译========");
         String strCodes = heFuManCode.createHeFuManCodes(str, ctrNodesMap);
         System.out.println(strCodes);
+
         System.out.println("========将赫夫曼编码使用ctrNodesMap集合中的字符集编码进行解密========");
         String originalStr = heFuManCode.heFuManCodeToString(strCodes, ctrNodesMap);
         System.out.println(originalStr);
-//        String a = "1100";
-//        String b = ctrNodesMap.get('a');
-//        System.out.println(a.equals(b));
-//        System.out.println(ctrNodesMap.containsValue(a));
-//        char c = heFuManCode.findCtr(a, ctrNodesMap);
-//        System.out.println("value = "+a+ "\tkey = "+c);
+
+        System.out.println("尝试使用包装好的赫夫曼编码方法 createHeFuManCode() 方法来返回编码来进行比较");
+        String srcHeFuManCode = heFuManCode.createHeFuManCode(str);
+        System.out.println(srcHeFuManCode.equals(strCodes));
+    }
+
+    Map<Character,String> heFuManCtrCodes = null;  // 创建成员变量赫夫曼编码
+    public String createHeFuManCode(String data) {
+        // 1.根据传输数据的字符来创建赫夫曼树
+        Node root = createCtrCodesTree(data);
+        // 2.根据创建的赫夫曼树创建 Map 赫夫曼编码集合
+        heFuManCtrCodes = createCtrCodes(root);  // 此处成员变量赫夫曼编码完成了初始化
+        // 3.将发送数据 data 根据创建的赫夫曼编码 Map 集合生成对象的赫夫曼编码字符串并返回
+        String dataHeFuManCodes = createHeFuManCodes(data, heFuManCtrCodes);
+        return dataHeFuManCodes;
     }
 
     /**
