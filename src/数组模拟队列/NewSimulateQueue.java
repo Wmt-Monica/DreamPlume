@@ -57,7 +57,7 @@ public class NewSimulateQueue {
             }else {
                   array[rear]=data;  //rear从0开始，故因此，下一个位置就是下标为rear
                   rear = (rear+1)%maxSize;  //因为为环形的数组队列，下一个所指的下标为
-        }
+            }
         }
         //6.获取队列数据，（出队列）
         public void GetArray(){
